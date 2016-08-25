@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+
+    <!-- head -->
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Owl Carousel Documentation">
+    <meta name="author" content="Bartosz Wojciechowski">
+    <title>
+      选项 | Owl Carousel 中文网
+    </title>
+
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/docs.theme.min.css">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+    <!-- Yeah i know js should not be in header. Its required for demos.-->
+
+    <!-- javascript -->
+    <script src="../assets/vendors/jquery.min.js"></script>
+    <script src="../assets/owlcarousel/owl.carousel.js"></script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="header">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="brand left">
+            <h3>
+              <a href="/">owl.carousel.js</a> 
+            </h3>
+          </div>
+          <a id="toggle-nav" class="right">
+            <span></span> <span></span> <span></span> 
+          </a> 
+          <div class="nav-bar">
+            <ul class="clearfix">
+              <li> <a href="/jquery/owlcarousel/index.html">首页</a>  </li>
+              <li> <a href="/jquery/owlcarousel/demos/demos.html">演示</a>  </li>
+              <li class="active">
+                <a href="/jquery/owlcarousel/docs/started-welcome.html">文档</a>
+              </li>
+              <li> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EFSGXZS7V2U9N" target="_Blank">打赏</a>  </li>
+              <li>
+                <a href="/jquery/owlcarousel/download/owl.carousel.zip">下载</a>
+                <span class="download"></span> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- title -->
+    <section class="title">
+      <div class="row">
+        <div class="large-12 columns">
+          <h1>API</h1>
+        </div>
+      </div>
+    </section>
+    <div id="docs">
+      <div class="row">
+        <div class="small-12 medium-3 large-3 columns">
+          <ul class="side-nav">
+            <li class="side-nav-head">入门</li>
+            <li> <a href="started-welcome.html">欢迎</a>  </li>
+            <li> <a href="started-installation.html">安装</a>  </li>
+            <li> <a href="started-faq.html">FAQ</a>  </li>
+          </ul>
+          <ul class="side-nav">
+            <li class="side-nav-head">API</li>
+            <li> <a href="api-options.html">选项</a>  </li>
+            <li> <a href="api-classes.html">Classes</a>  </li>
+            <li> <a href="api-events.html">Events</a>  </li>
+          </ul>
+          <ul class="side-nav">
+            <li class="side-nav-head">开发</li>
+            <li> <a href="dev-buildin-plugins.html">内置插件</a>  </li>
+            <li> <a href="dev-plugin-api.html">API插件</a>  </li>
+            <li> <a href="dev-styles.html">SASS样式</a>  </li>
+            <li> <a href="dev-external.html">外部库</a>  </li>
+          </ul>
+          <ul class="side-nav">
+            <li class="side-nav-head">支持</li>
+            <li> <a href="support-contributing.html">特约</a>  </li>
+            <li> <a href="support-changelog.html">更新日志</a>  </li>
+            <li> <a href="support-contact.html">联系</a>  </li>
+          </ul>
+        </div>
+        <div class="small-12 medium-9 large-9 columns">
+          <article class="docs-content">
+            <h2 id="options">选项</h2>
+            <blockquote>
+              <p>列出包括内置插件、视频、延迟加载、自动高度、动画等所有选项。</p>
+            </blockquote>
+            <h4 id="items">items</h4>
+            <p>Type: <code>Number</code>
+              <br />Default: <code>3</code>
+            </p>
+            <p>要在屏幕上看到的项目数</p>
+            <hr>
+            <h4 id="margin">margin</h4>
+            <p>Type: <code>Number</code>
+              <br />Default: <code>0</code>
+            </p>
+            <p>margin-right(px) on item.</p>
+            <hr>
+            <h4 id="loop">loop</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>无限循环. 拼结头尾项，形成无限循环错觉。</p>
+            <hr>
+            <h4 id="center">center</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>居中项目. 当项目数为基数时，效果更好.</p>
+            <hr>
+            <h4 id="mousedrag">mouseDrag</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>鼠标拖拽功能</p>
+            <hr>
+            <h4 id="touchdrag">touchDrag</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>触摸滑动功能</p>
+            <hr>
+            <h4 id="pulldrag">pullDrag</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>Stage pull to edge.</p>
+            <hr>
+            <h4 id="freedrag">freeDrag</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Item pull to edge.</p>
+            <hr>
+            <h4 id="stagepadding">stagePadding</h4>
+            <p>Type: <code>Number</code>
+              <br />Default: <code>0</code>
+            </p>
+            <p>Padding left and right on stage (can see neighbours).</p>
+            <hr>
+            <h4 id="merge">merge</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>合并项目. 查询 data-merge=&#x27;{number}&#x27; 内的项目..</p>
+            <hr>
+            <h4 id="mergefit">mergeFit</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>适应合并项目，如果屏幕比项目小。</p>
+            <hr>
+            <h4 id="autowidth">autoWidth</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>设置无grid内容. 自适应宽度</p>
+            <hr>
+            <h4 id="startposition">startPosition</h4>
+            <p>Type: <code>Number/String</code>
+              <br />Default: <code>0</code>
+            </p>
+            <p>起始位置或锚链接如 &#x27;#id&#x27;.</p>
+            <hr>
+            <h4 id="urlhashlistener">URLhashListener</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Listen to url hash changes. data-hash on items is required.</p>
+            <hr>
+            <h4 id="nav">nav</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>显示 next/prev 按钮.</p>
+            <hr>
+            <h4 id="navrewind">navRewind</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>转到 最前/最后.</p>
+            <hr>
+            <h4 id="navtext">navText</h4>
+            <p>Type: <code>Array</code>
+              <br />Default: <code>[&amp;#x27;next&amp;#x27;,&amp;#x27;prev&amp;#x27;]</code>
+            </p>
+            <p>支持HTML标签</p>
+            <hr>
+            <h4 id="slideby">slideBy</h4>
+            <p>Type: <code>Number/String</code>
+              <br />Default: <code>1</code>
+            </p>
+            <p>Navigation slide by x. &#x27;page&#x27; string can be set to slide by page.</p>
+            <hr>
+            <h4 id="dots">dots</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>显示点导航</p>
+            <hr>
+            <h4 id="dotseach">dotsEach</h4>
+            <p>Type: <code>Number/Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Show dots each x item.</p>
+            <hr>
+            <h4 id="dotdata">dotData</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Used by data-dot content.</p>
+            <hr>
+            <h4 id="lazyload">lazyLoad</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Lazy load images. data-src and data-src-retina for highres. Also load images into background inline style if element is not &lt;img&gt;</p>
+            <hr>
+            <h4 id="lazycontent">lazyContent</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>lazyContent was introduced during beta tests but i removed it from the final release due to bad implementation. It is a nice options so i will work on it in the nearest feature.</p>
+            <hr>
+            <h4 id="autoplay">autoplay</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Autoplay.</p>
+            <hr>
+            <h4 id="autoplaytimeout">autoplayTimeout</h4>
+            <p>Type: <code>Number</code>
+              <br />Default: <code>5000</code>
+            </p>
+            <p>Autoplay interval timeout.</p>
+            <hr>
+            <h4 id="autoplayhoverpause">autoplayHoverPause</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Pause on mouse hover.</p>
+            <hr>
+            <h4 id="smartspeed">smartSpeed</h4>
+            <p>Type: <code>Number</code>
+              <br />Default: <code>250</code>
+            </p>
+            <p>Speed Calculate. More info to come..</p>
+            <hr>
+            <h4 id="fluidspeed">fluidSpeed</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>Number</code>
+            </p>
+            <p>Speed Calculate. More info to come..</p>
+            <hr>
+            <h4 id="autoplayspeed">autoplaySpeed</h4>
+            <p>Type: <code>Number/Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>autoplay speed.</p>
+            <hr>
+            <h4 id="navspeed">navSpeed</h4>
+            <p>Type: <code>Number/Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Navigation speed.</p>
+            <hr>
+            <h4 id="dotsspeed">dotsSpeed</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>Number/Boolean</code>
+            </p>
+            <p>Pagination speed.</p>
+            <hr>
+            <h4 id="dragendspeed">dragEndSpeed</h4>
+            <p>Type: <code>Number/Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Drag end speed.</p>
+            <hr>
+            <h4 id="callbacks">callbacks</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>true</code>
+            </p>
+            <p>Enable callback events.</p>
+            <hr>
+            <h4 id="responsive">responsive</h4>
+            <p>Type: <code>Object</code>
+              <br />Default: <code>empty object</code>
+            </p>
+            <p>Object containing responsive options. Can be set to false to remove responsive capabilities.</p>
+            <hr>
+            <h4 id="responsiverefreshrate">responsiveRefreshRate</h4>
+            <p>Type: <code>Number</code>
+              <br />Default: <code>200</code>
+            </p>
+            <p>Responsive refresh rate.</p>
+            <hr>
+            <h4 id="responsivebaseelement">responsiveBaseElement</h4>
+            <p>Type: <code>DOM element</code>
+              <br />Default: <code>window</code>
+            </p>
+            <p>Set on any DOM element. If you care about non responsive browser (like ie8) then use it on main wrapper. This will prevent from crazy resizing.</p>
+            <hr>
+            <h4 id="responsiveclass">responsiveClass</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Optional helper class. Add &#x27;owl-reponsive-&#x27; + &#x27;breakpoint&#x27; class to main element. Can be used to stylize content on given breakpoint.</p>
+            <hr>
+            <h4 id="video">video</h4>
+            <p>Type: <code>Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Enable fetching YouTube/Vimeo videos.</p>
+            <hr>
+            <h4 id="videoheight">videoHeight</h4>
+            <p>Type: <code>Number/Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Set height for videos.</p>
+            <hr>
+            <h4 id="videowidth">videoWidth</h4>
+            <p>Type: <code>Number/Boolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Set width for videos.</p>
+            <hr>
+            <h4 id="animateout">animateOut</h4>
+            <p>Type: <code>String/Bolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>CSS3 animation out.</p>
+            <hr>
+            <h4 id="animatein">animateIn</h4>
+            <p>Type: <code>String/Bolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>CSS3 animation in.</p>
+            <hr>
+            <h4 id="fallbackeasing">fallbackEasing</h4>
+            <p>Type: <code>String</code>
+              <br />Default: <code>swing</code>
+            </p>
+            <p>Easing for CSS2 $.animate.</p>
+            <hr>
+            <h4 id="info">info</h4>
+            <p>Type: <code>Function</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Callback to retrieve basic information (current item/pages/widths). Info function second parameter is Owl DOM object reference.</p>
+            <hr>
+            <h4 id="nesteditemselector">nestedItemSelector</h4>
+            <p>Type: <code>String/Class</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Use it if owl items are deep nasted inside some generated content. E.g &#x27;youritem&#x27;. Dont use dot before class name.</p>
+            <hr>
+            <h4 id="itemelement">itemElement</h4>
+            <p>Type: <code>String</code>
+              <br />Default: <code>div</code>
+            </p>
+            <p>DOM element type for owl-item.</p>
+            <hr>
+            <h4 id="stageelement">stageElement</h4>
+            <p>Type: <code>String</code>
+              <br />Default: <code>div</code>
+            </p>
+            <p>DOM element type for owl-stage.</p>
+            <hr>
+            <h4 id="navcontainer">navContainer</h4>
+            <p>Type: <code>String/Class/ID/Bolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Set your own container for nav.</p>
+            <hr>
+            <h4 id="dotscontainer">dotsContainer</h4>
+            <p>Type: <code>String/Class/ID/Bolean</code>
+              <br />Default: <code>false</code>
+            </p>
+            <p>Set your own container for nav.</p>
+            <hr>
+            <h3 id="next-step">Next Step</h3>
+            <h4 id="-class-list-classes-html-">
+              <a href="classes.html">Class List</a> 
+            </h4>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="large-12 columns">
+          <h5>
+            <a href="http://www.700tools.com/">www.700tools.com</a>
+          </h5>
+        </div>
+      </div>
+    </footer>
+
+    <!-- vendors -->
+    <script src="../assets/vendors/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+
+    <!-- head -->
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Owl Carousel Documentation">
+    <meta name="author" content="Bartosz Wojciechowski">
+    <title>
+      安装 | Owl Carousel 中文网
+    </title>
+
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/docs.theme.min.css">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+    <!-- Yeah i know js should not be in header. Its required for demos.-->
+
+    <!-- javascript -->
+    <script src="../assets/vendors/jquery.min.js"></script>
+    <script src="../assets/owlcarousel/owl.carousel.js"></script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="header">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="brand left">
+            <h3>
+              <a href="/">owl.carousel.js</a> 
+            </h3>
+          </div>
+          <a id="toggle-nav" class="right">
+            <span></span> <span></span> <span></span> 
+          </a> 
+          <div class="nav-bar">
+            <ul class="clearfix">
+              <li> <a href="/jquery/owlcarousel/index.html">首页</a>  </li>
+              <li> <a href="/jquery/owlcarousel/demos/demos.html">演示</a>  </li>
+              <li class="active">
+                <a href="/jquery/owlcarousel/docs/started-welcome.html">文档</a>
+              </li>
+              <li> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EFSGXZS7V2U9N" target="_Blank">打赏</a>  </li>
+              <li>
+                <a href="/jquery/owlcarousel/download/owl.carousel.zip">下载</a>
+                <span class="download"></span> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- title -->
+    <section class="title">
+      <div class="row">
+        <div class="large-12 columns">
+          <h1>入门</h1>
+        </div>
+      </div>
+    </section>
+    <div id="docs">
+      <div class="row">
+        <div class="small-12 medium-3 large-3 columns">
+          <ul class="side-nav">
+            <li class="side-nav-head">入门</li>
+            <li> <a href="started-welcome.html">欢迎</a>  </li>
+            <li> <a href="started-installation.html">安装</a>  </li>
+            <li> <a href="started-faq.html">FAQ</a>  </li>
+          </ul>
+          <ul class="side-nav">
+            <li class="side-nav-head">API</li>
+            <li> <a href="api-options.html">选项</a>  </li>
+            <li> <a href="api-classes.html">Classes</a>  </li>
+            <li> <a href="api-events.html">Events</a>  </li>
+          </ul>
+          <ul class="side-nav">
+            <li class="side-nav-head">开发</li>
+            <li> <a href="dev-buildin-plugins.html">内置插件</a>  </li>
+            <li> <a href="dev-plugin-api.html">API插件</a>  </li>
+            <li> <a href="dev-styles.html">SASS样式</a>  </li>
+            <li> <a href="dev-external.html">外部库</a>  </li>
+          </ul>
+          <ul class="side-nav">
+            <li class="side-nav-head">支持</li>
+            <li> <a href="support-contributing.html">特约</a>  </li>
+            <li> <a href="support-changelog.html">更新日志</a>  </li>
+            <li> <a href="support-contact.html">联系</a>  </li>
+          </ul>
+        </div>
+        <div class="small-12 medium-9 large-9 columns">
+          <article class="docs-content">
+            <h2 id="installation">安装</h2>
+            <hr>
+            <h3 id="include-css">引入 CSS</h3>
+            <p>首先，引入两个CSS文件到您的HTML头部：</p>
+            <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;owlcarousel/owl.carousel.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;owlcarousel/owl.theme.default.min.css&quot;&gt;</code></pre>
+            <blockquote>
+              <p><code>owl.carousel.css</code> 文件是必需的，它最好放在 *.js 之前</p>
+            </blockquote>
+            <p>然后 <code>owl.theme.default.css</code> 文件是可选的可以自由编辑。源包内还可以找到
+              <a href="http://sass-lang.com/">SCSS</a> 文件，方便你生成自己的主题。</p>
+            <h3 id="include-js">引入 JS</h3>
+            <p>接着，引入 jQuery 和 <code>owl.carousel.min.js</code> 到尾部。</p>
+            <pre><code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;owlcarousel/owl.carousel.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+            <h3 id="set-html">写入 HTML</h3>
+            <p>你不需要任何特殊的标记。所有你需要的是你的包裹div的（猫头鹰适用于任何类型的元素/img/span ..） 容器元素中 <code>&lt;div class=&quot;owl-carousel&quot;&gt;</code>. 类 &quot;owl-carousel&quot; 是强制运用来自 owl.carousel.css 文件的样式。</p>
+            <pre><code>&lt;!-- Set up your HTML --&gt;
+&lt;div class=&quot;owl-carousel&quot;&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h3 id="call-the-plugin">调用插件</h3>
+            <p>所示为猫头鹰初始化函数，你的Carousel已准备就绪。</p>
+            <pre><code>$(document).ready(function(){
+  $(&quot;.owl-carousel&quot;).owlCarousel();
+});</code></pre>
+            <blockquote>
+              <p>查看
+                <a href="/jquery/owlcarousel/demos/demos.html">演示</a> 定制和选择使用。</p>
+            </blockquote>
+            <h3 id="next-step">下一步</h3>
+            <ul>
+              <li> <a href="started-faq.html">FAQ</a>  </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="large-12 columns">
+          <h5>
+            <a href="http://www.700tools.com/">www.700tools.com</a>
+          </h5>
+        </div>
+      </div>
+    </footer>
+
+    <!-- vendors -->
+    <script src="../assets/vendors/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
